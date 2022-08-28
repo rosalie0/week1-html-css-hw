@@ -1,21 +1,43 @@
 body {
+  margin-top: 100px;
   background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-bottom: 20px;
 }
+
+header {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 nav {
-  height: 50px;
+  height: 70px;
   width: 100vw;
+  background-color: #4DC69A;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   position: fixed;
   top: 0;
   left: 0;
 }
 
-#header-logo {
+nav a {
+  margin-right: 10px;
 
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color:#518aec;
+}
+h1 {
+  color: red;
+  text-align: center;
 }
 h2 {
   font-size: 32px;
