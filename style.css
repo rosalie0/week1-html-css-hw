@@ -73,6 +73,38 @@ p {
 section {
   margin: 10px;
 }
+/*
+about
+*/
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.schedule-div {
+  padding: 10px;
+}
+.schedule-div ul {
+  padding-left: 0;
+}
+.schedule-div li {
+  list-style-type: none;
+}
+
+/*
+SCHEDULE
+*/
+.schedule-div {
+  border: dashed yellow;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FCEDDA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
 
 /*
 CLEARS AND PROG LIST 
@@ -83,12 +115,16 @@ CLEARS AND PROG LIST
   justify-content: center;
   gap: 40px
 }
+.fight-div ul {
+  padding: 0px;
+}
 .completed-container {
   padding: 0 20px 0 20px;
+  color:#4DC69A;
 }
 .prog-container {
   padding: 0 20px 0 20px;
-
+  color:#EE4E34
 }
 #prog-ul>li {
   list-style-type: circle;
@@ -117,6 +153,7 @@ STATIC MEMBER CARDS
 }
 .member-card:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  transition: all .3s ease-in-out;
 }
 
 .member-card-top {
@@ -151,38 +188,35 @@ STATIC MEMBER CARDS
 /*
 APPLICATION
 */
-
-button {
-  color: lightblue;
-  border: 1px solid #518aec;
-  font-size: 32px;
-  background: linear-gradient(270deg, #e3ffe7 0%, #d9e7ff 100%);
-  text-align: center;
-  width: 400px;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-button:hover {
-  background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  width: 450px;
-  height: 50px;
-  background-image: linear-gradient(to right, #d9e7ff 100%, #e3ffe7 0%);
-  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-}
-
 .application-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: center;
 }
+
+button {
+  color: lightblue;
+  border: 1px solid #518aec;
+  background: linear-gradient(270deg, #e3ffe7 0%, #d9e7ff 100%);
+  font-size: 32px;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  padding: 20px;
+}
+
+button:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+
 
