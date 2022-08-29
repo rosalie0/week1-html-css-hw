@@ -56,10 +56,13 @@ h1 {
   color: #EE4E34;
   text-align: center;
 }
+
 h2 {
   font-size: 32px;
   color: #4DC69A;
   margin: 5px;
+  text-align: center;
+  font-style: italic;
 }
 h4 {
   margin:5px;
