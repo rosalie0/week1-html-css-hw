@@ -1,24 +1,32 @@
 body {
-  margin-top: 100px;
   background: linear-gradient(90deg, #9cf3a9 0%, #6f8ec5 100%);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.even-bigger-container {
+  display: flex;
+  flex-direction: column;
+}
 .container {
-  padding: 15px;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 50px;
 }
 
+.header-margin {
+  width: 100vw;
+  margin-bottom: 5px;
+}
 /*
 *
 HEADER
 *
 */
+
+
 nav {
-  height: 75px;
+  height: fit-content;
   width: 100vw;
   background-color: rgb(77,198,154, 0.8);
   margin-bottom: 5px;
@@ -33,7 +41,8 @@ nav {
   top: 0;
   left: 0;
 }
-nav>img {
+
+#header-logo {
   border-radius: 20px;
 }
 
@@ -48,6 +57,18 @@ nav a:hover {
   color:#518aec;
 }
 
+@media (max-width: 700px) {
+  #header-logo {
+    display: none; 
+  }
+  nav {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  body {
+    margin-top:auto
+  }
+}
 /* 
 GENERAL STYLING
 */
@@ -87,11 +108,18 @@ about
 .schedule-div {
   padding: 10px;
 }
+
+.schedule-div>h3 {
+  margin:0;
+}
 .schedule-div ul {
   padding-left: 0;
+  margin: 0;
+  padding: 10px;
 }
 .schedule-div li {
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 /*
@@ -188,11 +216,17 @@ STATIC MEMBER CARDS
 /*
 APPLICATION
 */
+#application {
+  background-color: rgba(238,	78,	52, 0.2);
+  border-radius: 20px;
+}
+
 .application-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
