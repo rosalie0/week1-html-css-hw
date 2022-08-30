@@ -10,10 +10,16 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255, 0.5);
-  border-radius: 50px;
+
 }
 
+section {
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 50px;
+  padding: 20px;
+}
+
+/* The invisible div to offset main contents based on header height */
 .header-margin {
   width: 100vw;
   margin-bottom: 5px;
@@ -76,12 +82,16 @@ GENERAL STYLING
 h1 {
   color: #EE4E34;
   text-align: center;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 50px;
+  margin: 0;
+  padding: 20px
 }
 
 h2 {
   font-size: 32px;
   color: #4DC69A;
-  margin: 5px;
+  margin: 0px;
   text-align: center;
   font-style: italic;
 }
@@ -111,6 +121,7 @@ about
 
 .schedule-div>h3 {
   margin:0;
+  font-size: 30px;
 }
 .schedule-div ul {
   padding-left: 0;
@@ -120,18 +131,24 @@ about
 .schedule-div li {
   list-style-type: none;
   margin-bottom: 0;
+  font-size: 36px;
 }
 
 /*
 SCHEDULE
 */
 .schedule-div {
-  border: dashed yellow;
+  border: 2px dashed yellow;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.4);
   color: #FCEDDA;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.4);
   text-align: center;
+}
+
+.schedule-div:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all .5s ease-in-out;
 }
 
 /*
@@ -166,22 +183,34 @@ STATIC MEMBER CARDS
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.card-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .member-card {
+  flex: 1;
   margin: 5px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+
   color: #FCEDDA;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  
 }
 .member-card:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  transition: all .3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all .5s ease-in-out;
 }
 
 .member-card-top {
@@ -217,8 +246,14 @@ STATIC MEMBER CARDS
 APPLICATION
 */
 #application {
-  background-color: rgba(238,	78,	52, 0.2);
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+#application:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all .4s ease-in-out;
 }
 
 .application-container {
@@ -226,10 +261,17 @@ APPLICATION
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-  padding-left: 5%;
-  padding-right: 5%;
   text-align: center;
+  gap: 5px;
+}
+
+.application-container>h3 {
+  color:#EE4E34;
+  margin-bottom: 0;
+  background-color: #FCEDDA;
+}
+.application-container>p {
+  margin:0px;
 }
 
 button {
@@ -242,12 +284,11 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   padding: 20px;
+  margin-top: 10px;
 }
 
 button:hover {
   background-position: 100% 0;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
