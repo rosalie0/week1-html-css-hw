@@ -13,12 +13,11 @@ body {
 	flex-direction: column;
 }
 
-.lightMode {
-	background-color: rgb(255, 255, 255, 0.5);
-}
 .darkMode {
 	background-color: rgb(0, 0, 0, 0.5);
+	color: #fcedda;
 }
+
 section {
 	background-color: rgb(255, 255, 255, 0.5);
 	border-radius: 50px;
