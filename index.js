@@ -1,4 +1,4 @@
-// Logic
+// Logic for header-margin height on reload
 $(document).ready(function () {
 	const calculatedHeight = $('nav').outerHeight();
 	$('.header-margin').css({
@@ -6,6 +6,9 @@ $(document).ready(function () {
 	});
 });
 
+// Dark / Light mode toggling
+
+// Application CLOSED alert
 const applicationButton = document.getElementById('application-button');
 applicationButton.addEventListener('click', () => {
 	const textElement = document.getElementById('application-status-text');
