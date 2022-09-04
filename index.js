@@ -7,6 +7,7 @@ $(document).ready(function () {
 });
 
 // Dark / Light mode toggling
+const body = document.getElementsByTagName('body')[0];
 const colormodeDiv = document.getElementById('colormode-div');
 const allSections = document.getElementsByTagName('section');
 const pageTitle = document.getElementsByTagName('h1')[0];
@@ -18,6 +19,9 @@ colormodeDiv.addEventListener('click', (event) => {
 	elementsToGetDarkBackground.forEach((elem) => {
 		elem.classList.toggle('darkMode');
 	});
+
+	// Toggle the entire page's background color
+	document.body.classList.toggle('darkModeBody');
 
 	// Toggle the icon
 	if (event.target.src.includes('sun')) {

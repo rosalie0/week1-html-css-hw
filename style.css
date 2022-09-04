@@ -4,6 +4,9 @@ body {
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.darkModeBody {
+	background: linear-gradient(270deg, #406345 0%, #394965 100%);
+}
 .even-bigger-container {
 	display: flex;
 	flex-direction: column;
