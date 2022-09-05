@@ -39,3 +39,5 @@ applicationButton.addEventListener('click', () => {
 		alert('Sorry!\n Applications are currently closed.');
 	}
 });
+
+document.addEventListener();
