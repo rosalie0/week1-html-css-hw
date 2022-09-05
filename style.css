@@ -1,19 +1,57 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: linear-gradient(90deg, #9cf3a9 0%, #6f8ec5 100%);
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.darkModeBody {
-	background: linear-gradient(270deg, #406345 0%, #394965 100%);
-}
 .even-bigger-container {
 	display: flex;
 	flex-direction: column;
 }
+
 .container {
 	display: flex;
 	flex-direction: column;
+}
+section {
+	background-color: rgb(255, 255, 255, 0.5);
+	border-radius: 50px;
+	padding: 20px;
+	margin: 10px;
+	scroll-margin-top: 75px;
+}
+
+/* The invisible div to offset main contents based on header height.
+Its height is decided with code in index.js */
+.header-margin {
+	width: 100vw;
+	margin-bottom: 5px;
+}
+
+/* MOBILE AND SMALL SCREEN SIZE STYLING */
+@media (max-width: 700px) {
+	#header-logo {
+		display: none;
+	}
+	nav {
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	body {
+		margin-top: auto;
+	}
+	section {
+		scroll-margin-top: 60px;
+	}
+}
+
+/* DARK MODE */
+.darkModeBody {
+	background: linear-gradient(270deg, #406345 0%, #394965 100%);
 }
 
 .darkMode {
@@ -21,17 +59,34 @@ body {
 	color: #fcedda;
 }
 
-section {
+/* 
+GENERAL STYLING ON TAGS
+*/
+h1 {
+	color: #ee4e34;
+	text-align: center;
 	background-color: rgb(255, 255, 255, 0.5);
 	border-radius: 50px;
+	margin: 0;
 	padding: 20px;
 }
 
-/* The invisible div to offset main contents based on header height */
-.header-margin {
-	width: 100vw;
-	margin-bottom: 5px;
+h2 {
+	font-size: 32px;
+	color: #4dc69a;
+	margin: 0px;
+	text-align: center;
+	font-style: italic;
 }
+
+h4 {
+	margin: 5px;
+}
+
+p {
+	margin: 5px;
+}
+
 /*
 *
 HEADER
@@ -74,49 +129,8 @@ nav a:hover {
 	height: 32px;
 }
 
-@media (max-width: 700px) {
-	#header-logo {
-		display: none;
-	}
-	nav {
-		padding-bottom: 10px;
-		padding-top: 10px;
-	}
-	body {
-		margin-top: auto;
-	}
-}
-/* 
-GENERAL STYLING
-*/
-
-h1 {
-	color: #ee4e34;
-	text-align: center;
-	background-color: rgb(255, 255, 255, 0.5);
-	border-radius: 50px;
-	margin: 0;
-	padding: 20px;
-}
-
-h2 {
-	font-size: 32px;
-	color: #4dc69a;
-	margin: 0px;
-	text-align: center;
-	font-style: italic;
-}
-h4 {
-	margin: 5px;
-}
-p {
-	margin: 5px;
-}
-section {
-	margin: 10px;
-}
 /*
-about
+ABOUT
 */
 .about-container {
 	display: flex;
@@ -185,10 +199,10 @@ CLEARS AND PROG LIST
 #prog-ul > li {
 	list-style-type: circle;
 }
+
 /*
 STATIC MEMBER CARDS
 */
-
 .members-container {
 	display: flex;
 	justify-content: center;

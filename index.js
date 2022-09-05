@@ -1,5 +1,4 @@
 // Logic for header-margin height on reload
-
 const calculatedHeight = $('nav').outerHeight();
 $('.header-margin').css({
 	height: calculatedHeight + 'px',
